@@ -42,13 +42,13 @@ function initMap() {
     const marker = new google.maps.Marker({
         position: uluru,
         map: map,
-        icon: './../img/Vector.png'
+        icon: './img/Vector.png'
     });
     const contentString =
         '<h1 class="maps__title">Voodoo</h1>' +
         '<p class="maps__subtitle">137 Glasgow St., Unit 115 <br> Kitchener, ON N2G 4X8 <br>Ukraine</p>' +
-        '<div class="maps__block"><img src="./../img/Shape.png" alt="1"> <p class="maps__text">1-800-480-9597</p></div>' +
-        '<div class="maps__block"><img src="./../img/mail.png" alt="2"> <p class="maps__text">info@voodoo.com</p></div>'
+        '<div class="maps__block"><img src="./img/Shape.png" alt="1"> <p class="maps__text">1-800-480-9597</p></div>' +
+        '<div class="maps__block"><img src="./img/mail.png" alt="2"> <p class="maps__text">info@voodoo.com</p></div>'
 
     const infowindow = new google.maps.InfoWindow({
         content: contentString,
