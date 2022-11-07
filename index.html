@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Voodoo Ecom</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" href="img/Vector.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -49,14 +50,51 @@
         <textarea placeholder="Enter Message*" class="container__input container__input-enter"></textarea>
         <button class="container__btn">Send Message</button>
         <div id="map" class="container__map">
-           
+
         </div>
     </div>
     <script src="./JS/index.js"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap&v=weekly"
-      defer
-    ></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap&v=weekly"
+        defer></script>
+    <script>
+        function initMap() {
+            const uluru = {
+                lat: 50.45039877766932,
+                lng: 30.444519259180446
+            };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: uluru,
+                streetViewControl: false,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                overviewMapControl: false,
+                rotateControl: false
+            });
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                icon: './img/Vector.png'
+            });
+            const contentString =
+                '<h1 class="maps__title">Voodoo</h1>' +
+                '<p class="maps__subtitle">137 Glasgow St., Unit 115 <br> Kitchener, ON N2G 4X8 <br>Ukraine</p>' +
+                '<div class="maps__block"><img src="./img/Shape.png" alt="1"> <p class="maps__text">1-800-480-9597</p></div>' +
+                '<div class="maps__block"><img src="./img/mail.png" alt="2"> <p class="maps__text">info@voodoo.com</p></div>'
+
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                ariaLabel: uluru,
+            });
+            infowindow.open(map, marker)
+        }
+
+        window.initMap = initMap;
+    </script>
 </body>
 
 </html>
