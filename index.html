@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__block">
+            <h1 class="container__title">Contact Us</h1>
+            <h2 class="container__subtitle">The Voodoo team is looking forward to hearing from you!</h2>
+        </div>
+        <input placeholder="Full Name*" type="text" class="container__input">
+        <input placeholder="Title/Position*" type="text" class="container__input">
+        <select class="container__input-practicle" name="select1">
+            <option value="value1">Practice / Institution*s</option>
+            <option value="value1">Option 1</option>
+            <option value="value2">Option 2</option>
+            <option value="value3">Option 3</option>
+        </select>
+        <input placeholder="Email Address*" type="text" class="container__input">
+        <input placeholder="Phone Number*" type="text" class="container__input">
+        <select class="container__input-medical" name="select2">
+            <option value="value1">Medical Profession*</option>
+            <option value="value1">Option 1</option>
+            <option value="value2">Option 2</option>
+            <option value="value3">Option 3</option>
+            <option value="value3">Option 4</option>
+            <option value="value3">Option 5</option>
+        </select>
+        <select class="container__input-type" name="select3">
+            <option value="value1">Type of Inquiry*</option>
+            <option value="value1">Option 1</option>
+            <option value="value2">Option 2</option>
+            <option value="value3">Option 3</option>
+            <option value="value3">Option 4</option>
+            <option value="value3">Option 5</option>
+            <option value="value3">Option 6</option>
+            <option value="value3">Option 7</option>
+        </select>
+        <textarea placeholder="Enter Message*" class="container__input container__input-enter"></textarea>
+        <button class="container__btn">Send Message</button>
+        <div id="map" class="container__map">
+           
+        </div>
+    </div>
+    <script src="./JS/index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap&v=weekly"
+      defer
+    ></script>
+</body>
+
+</html>
